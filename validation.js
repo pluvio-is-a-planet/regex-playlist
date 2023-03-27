@@ -10,16 +10,12 @@ const regExPatterns = {
 };
 
 function validate(field, regex){
-    console.log('field:', field);
-    console.log('regex:', regex);
     if (regex.test(field.value)) {
         field.className = 'valid';
     } else {
         field.className = 'invalid';
     }
 }
-
-console.log(regExPatterns);
 
 userInputs.forEach((input) => {
     input.addEventListener('keyup',(activeField) => {
